@@ -13,10 +13,11 @@ public partial class painel_meu_perfil : System.Web.UI.Page
     {
         if (!IsPostBack)
         {
-            if (Request.QueryString["id"] != null)
+            // if (Request.QueryString["id"] == null)
+            if(Session["ID"].ToString() !=  null)
             {
                 int IdUsuario;
-                int.TryParse(Request.QueryString["id"], out IdUsuario);
+                int.TryParse(Session["ID"].ToString(), out IdUsuario);
 
                 UsuariosBO usuariosBO = new UsuariosBO();
                 Usuarios usuario = usuariosBO.ListaUsuarios(new Usuarios(IdUsuario)).FirstOrDefault();

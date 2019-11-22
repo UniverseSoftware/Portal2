@@ -28,13 +28,15 @@ public partial class painel_login : System.Web.UI.Page
         {
             Session.Add("PainelAutenticado", true);
             Session.Add("Usuario", usuario);
+            Session.Add("id", usuario.IdUsuario);
+            Session["ID"] = usuario.IdUsuario;
             if (usuario.TipoUsuario == 0)
             {
                 Response.Redirect("Default.aspx");//Quanto for Admin mandar para o gerenciamento da empresa.
             }
             else if (usuario.TipoUsuario == 1)
             {
-                Response.Redirect("empresa/DefaultEmp.aspx");//Quando for Empresa mandar para gestão da empresa.
+                Response.Redirect("empresa/DefaultEmp.aspx?id="+usuario.IdUsuario+ "");//Quando for Empresa mandar para gestão da empresa.
             }
             else
             {

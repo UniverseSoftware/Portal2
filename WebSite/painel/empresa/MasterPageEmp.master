@@ -17,9 +17,9 @@
             </div>
             <div id="menu">
                 <ul>
-                    <li><a href="meu_perfilemp.aspx?id{0}">Meu Pefil</a></li>
-                    <li><a href="gerenciar_pedidos.aspx?id{0}">Gerenciar Pedidos</a></li>
-                    <li><a href="gerenciar_servicos.aspx?id{0}">Gerenciar Serviços</a></li>
+                    <li><a href="meu_perfilemp.aspx">Meu Pefil</a></li>
+                    <li><a href="gerenciar_pedidos.aspx">Gerenciar Pedidos</a></li>
+                    <li><a href="gerenciar_servicos.aspx">Gerenciar Serviços</a></li>
                     <li><a href="sair.aspx">Sair</a></li>
                 </ul>
             </div>
